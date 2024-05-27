@@ -22,23 +22,22 @@ public class Codigo7 {
 	    capitales.put("Nicaragua", "Managua");
 	    capitales.put("Panamá", "Panamá");
 	   
-	    String coutry = ""; //Se cambia el nombre
-	    String capital = ""; //Se inicializa capital
+	    String country = ""; //Se cambia el nombre
 	    
 	    try {
 	      System.out.print("Escribe el nombre de un país y te diré su capital: ");
 	      country = sc.nextLine();
 	      
 	      if (!country.equals("salir")) { //Se completó el equals
-	        if (capital.containsValue(country)) {
-	          System.print("La capital de " + country);
-	          System.out.println(" es " + capital.put(country));
+	        if (capitales.containsKey(country)) {
+	          System.out.print("La capital de " + country);
+	          System.out.println(" es " + capitales.put(country, capital));
 	          
 	        } else {
 	          System.out.print("No conozco la respuesta ");
 	          System.out.print("¿cuál es la capital de " + country + "?: ");
 	          String capital = sc.nextLine();
-	          capital.put(country, capital);
+	          capitales.put(country, capital);
 	          System.out.println("Gracias por enseñarme nuevas capitales");
 	        }
 	      }
